@@ -197,7 +197,7 @@ kv = '''
 			mode:'round'
 			required:True
 			hint_text:'password'
-			on_text:root.password_strength
+			on_text:root.password_strength()
 		MDSeparator:
 			md_bg_color:[0, 0, 0, 0]
 			size_hint_y:None
@@ -207,7 +207,7 @@ kv = '''
 			mode:'round'
 			required:True
 			hint_text:'repeat password'
-			on_text:root.compare_password
+			on_text:root.compare_password()
 		MDSeparator:
 			md_bg_color:[0, 0, 0, 0]
 			size_hint_y:None
@@ -215,6 +215,7 @@ kv = '''
 		MDFillRoundFlatButton:
 			id:signup_btn
 			text:'sign up'
+			on_release:root.signup()
 		
 
 
@@ -234,7 +235,7 @@ kv = '''
 		password: True
 		mode:'round'
 		icon_left: root.text_field_icon
-		on_text_validate:root.validate
+		on_text_validate:root.validate()
 	MDIconButton:
 		id:password_field_clickable
 		icon: root.icon
@@ -824,17 +825,20 @@ class SignUpUser(MDCard):
 	def password_strength(self, *args):
 		''' Check the strength of the password '''
 		password_text = self.password.text
-		if len(password_text) < 8:
-			self.password.error = True
-			self.password.helper_text_mode = 'on_error'
-			self.password.helper_text = 'Weak password'
-			
+				
 		from tools import PasswordStrength
-		strong = PasswordStrength(password_text)
+		strong = PasswordStrength(password_text).validate()
 		if strong:
+			self.password.error = False
 			self.password.helper_text_mode = 'persistent'
 			self.password.helper_text_color_normal = [0, 1, 0, 0.8]
 			self.password.helper_text = 'Strong password'
+		else:
+			self.password.error = True
+			self.password.helper_text_mode = 'on_error'
+			self.password.helper_text = 'Weak password (make sure your password has upper and lowercase , digits and special characters)'
+
+
 
 	def compare_password(self, *args):
 		if self.password.text != self.repeat_password.text:
@@ -842,19 +846,29 @@ class SignUpUser(MDCard):
 			self.repeat_password.error = True
 			self.repeat_password.helper_text = "Not a match "
 		else:
+			self.repeat_password.error = False
 			self.repeat_password.helper_text_mode = 'persistent'
 			self.repeat_password.helper_text_color_normal = [0, 1, 0, 0.8]
 			self.repeat_password.helper_text = 'match'
 
 	def signup(self, *args):
 		''' Signup the user to the the system '''
+		self.compare_password()
 		from tools import SignUp
 
 		user = SignUp(self.username.text,self.email.text, self.password.text, self.repeat_password.text)
 		user.create_user()
 		if user:
-			CustomSnackbar(text=f'Welcome {self.username}').open()
-
+			notify_banner(f'welcome {self.username.text}')
+			self.username.text = ''
+			self.email.text = ''
+			self.password.text = ''
+			self.repeat_password.text = ''
+		else:
+			CustomSnackbar(text=f'Failed').open()#
+	def _on_keyboard_down(self, instance, keyboard, keycode, text, modifiers):
+		if self.repeat_password.focus and keycode == 40:
+			self.signup()
 
 
 
@@ -924,6 +938,7 @@ class EposApp(MDApp):
 		content.ids.button.bind(on_release=dialog.dismiss)
 		dialog.content_cls = content
 		dialog.open()
+	
 
 	def notify_error(self, title='Error', message=''):
 		if message == '':
@@ -941,7 +956,22 @@ class EposApp(MDApp):
 			self.root.ids.navdrawer.set_state("open")
 		else:
 			self.notify_error(title='Login Error', message="Make sure your are logined.\n if you don't hava an account contact the admin")
-
+def notify_banner(message):
+	dialog = AKAlertDialog(
+	    header_icon="bell",
+	    progress_interval=5,
+	    fixed_orientation="landscape",
+	    pos_hint={"right": 1, "y": 0.05},
+	    dialog_radius=0,
+	    opening_duration=5,
+	    size_landscape=["350dp", "70dp"],
+	    header_width_landscape="70dp",
+	)
+	dialog.bind(on_progress_finish=dialog.dismiss)
+	content = Notification(text=message)
+	content.ids.button.bind(on_release=dialog.dismiss)
+	dialog.content_cls = content
+	dialog.open()
 
 if __name__ == '__main__':
 	EposApp().run()

@@ -102,12 +102,18 @@ class PasswordStrength:
 	        return True
 	    else:
 	        return False
+	def check_length(self, length=8):
+		if len(self.password) < length:
+			return False
+		else:
+			return True
 	    
 	def validate_password_strength(self, password):
 	    digit = False
 	    special = False
 	    upper = False
 	    lower = False
+	    length = False
 	    for char in password:
 	        if self.check_digits(char):
 	            digit = True
@@ -128,8 +134,11 @@ class PasswordStrength:
 	            lower = True
 	        else:
 	            continue
-	            
-	    if digit and special and upper and lower:
+	    if self.check_length():
+	    	length = True
+	    #status = f'digit {digit} \n special {special}\n upper{upper}\n lower {loweer}'
+	    #print(status)       
+	    if digit and special and upper and lower and length:
 	        return True
 	    else:
 	        return False
