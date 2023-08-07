@@ -1,19 +1,28 @@
-from sqlalchemy import String, Integer, Column,DateTime,  Boolean, create_engine, ForeignKey
+from sqlalchemy import String, Integer, Column,DateTime, Time,  Boolean, create_engine, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 
-
+from datetime import date, datetime
+import time
 Base = declarative_base()
 
 engine = create_engine('sqlite:///epos.db')
+def current_time():
+	import datetime as dt
+	time_string = dt.datetime.now().strftime('%H:%M:%S') 
+	now = time_string.split(':')
+	hour = int(now[0])
+	minute = int(now[1])
+	second = int(now[2])
+	return dt.time(hour=hour, minute=minute, second=second)
 
 class Items(Base):
 	__tablename__ = 'Items'
 	id = Column(String, primary_key=True)
-	name = Column(String, nullable=False )
-	quantity = Column(Integer, nullable=False)
+	name = Column(String)
+	quantity = Column(Integer)
 	price = Column(Integer)
-	unit = Column(Integer)
+	unit = Column(String)
 	description = Column(String)
 
 	@property
@@ -59,14 +68,28 @@ class Transaction(Base):
 	__tablename__ = 'Transaction'
 	id = Column(Integer, primary_key=True)
 	user_id = Column(Integer, ForeignKey('User.id'))
+	date = Column(DateTime, default=date.today())
+	time = Column(Time, default=current_time())
 	amount = Column(Integer)
 
 	@property
 	def serialize(self):
-		self._serialized = {'id':self.id, 'user_id':self.user_id, 'amount':self.amount}
+		self._serialize = {'id':self.id, 'user_id':self.user_id, 'amount':self.amount, 'date':self.date, 'time':self.time}
 		return self._serialize
 	
 
+class LogRecords(Base):
+	__tablename__ = 'LogRecords'
+	id = Column(Integer, primary_key=True)
+	user = Column(Integer, ForeignKey('User.id'))
+	date = Column(DateTime, default=date.today())
+	time = Column(Time, default=current_time())
+	action = Column(String)
+
+	@property
+	def records(self):
+		self._serialize = {'id':self.id, 'user_id':self.user_id,  'date':self.date, 'time':self.time}
+		return self._serialize
 
 
 
