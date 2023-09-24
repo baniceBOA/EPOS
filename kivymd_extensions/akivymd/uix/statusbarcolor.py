@@ -2,6 +2,13 @@ from kivy.utils import get_hex_from_color, platform
 
 
 def change_statusbar_color(statuscolor, icons_color="Light"):
+    ''' 
+    Changes the Color of a status bars in Android Platform
+    Args:
+        statuscolor: The color of the status bar
+    Args:
+        icon_color:Color of the icon, defaluts to Light
+    '''
 
     if platform != "android":
         return

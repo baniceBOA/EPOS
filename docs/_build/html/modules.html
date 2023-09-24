@@ -1,0 +1,639 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+        <title>EPOS - ELECTRONIC POINT OF SALE 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">ELECTRONIC POINT OF SALE 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">ELECTRONIC POINT OF SALE 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="epos">
+<h1>EPOS<a class="headerlink" href="#epos" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EPOS.html">EPOS package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.uix.html">EPOS.uix package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.uix.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.uix.html#module-EPOS.uix">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS.app">EPOS.app module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.AddImage"><code class="docutils literal notranslate"><span class="pre">AddImage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddImage.dismiss_dialog"><code class="docutils literal notranslate"><span class="pre">AddImage.dismiss_dialog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddImage.on_source"><code class="docutils literal notranslate"><span class="pre">AddImage.on_source()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddImage.set_image"><code class="docutils literal notranslate"><span class="pre">AddImage.set_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddImage.source"><code class="docutils literal notranslate"><span class="pre">AddImage.source</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem"><code class="docutils literal notranslate"><span class="pre">AddItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.choose_image"><code class="docutils literal notranslate"><span class="pre">AddItem.choose_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.clean_inputs"><code class="docutils literal notranslate"><span class="pre">AddItem.clean_inputs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.save_item"><code class="docutils literal notranslate"><span class="pre">AddItem.save_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.selection"><code class="docutils literal notranslate"><span class="pre">AddItem.selection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.validate_integer"><code class="docutils literal notranslate"><span class="pre">AddItem.validate_integer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.validate_otg"><code class="docutils literal notranslate"><span class="pre">AddItem.validate_otg()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AddItem.validate_strings"><code class="docutils literal notranslate"><span class="pre">AddItem.validate_strings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.get_logged_activities"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.get_logged_activities()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.launch_admin"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.launch_admin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.logs"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.logs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.logs_refresh"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.logs_refresh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.next"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.next</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.previous"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.previous</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.screen_manager"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.screen_manager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AdminDashBoard.users"><code class="docutils literal notranslate"><span class="pre">AdminDashBoard.users()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.AvatarListItem"><code class="docutils literal notranslate"><span class="pre">AvatarListItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AvatarListItem.icon_left"><code class="docutils literal notranslate"><span class="pre">AvatarListItem.icon_left</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AvatarListItem.icon_right"><code class="docutils literal notranslate"><span class="pre">AvatarListItem.icon_right</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.AvatarListItem.text"><code class="docutils literal notranslate"><span class="pre">AvatarListItem.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.CardContainer"><code class="docutils literal notranslate"><span class="pre">CardContainer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CardContainer.scale"><code class="docutils literal notranslate"><span class="pre">CardContainer.scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CardContainer.secondary_text"><code class="docutils literal notranslate"><span class="pre">CardContainer.secondary_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CardContainer.source"><code class="docutils literal notranslate"><span class="pre">CardContainer.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CardContainer.text"><code class="docutils literal notranslate"><span class="pre">CardContainer.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.CartItem"><code class="docutils literal notranslate"><span class="pre">CartItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CartItem.cart_button_icon"><code class="docutils literal notranslate"><span class="pre">CartItem.cart_button_icon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CartItem.source"><code class="docutils literal notranslate"><span class="pre">CartItem.source</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.helper_text"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.helper_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.helper_text_mode"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.helper_text_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.hint_text"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.hint_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.icon"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.icon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.text"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.text_field_icon"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.text_field_icon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.toggle_eye"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.toggle_eye()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ClickableTextFieldRound.validate"><code class="docutils literal notranslate"><span class="pre">ClickableTextFieldRound.validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.CustomSnackbar"><code class="docutils literal notranslate"><span class="pre">CustomSnackbar</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CustomSnackbar.font_size"><code class="docutils literal notranslate"><span class="pre">CustomSnackbar.font_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CustomSnackbar.icon"><code class="docutils literal notranslate"><span class="pre">CustomSnackbar.icon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.CustomSnackbar.text"><code class="docutils literal notranslate"><span class="pre">CustomSnackbar.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp"><code class="docutils literal notranslate"><span class="pre">EposApp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.build"><code class="docutils literal notranslate"><span class="pre">EposApp.build()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.change_screen"><code class="docutils literal notranslate"><span class="pre">EposApp.change_screen()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.data_dir"><code class="docutils literal notranslate"><span class="pre">EposApp.data_dir</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.got_to_login"><code class="docutils literal notranslate"><span class="pre">EposApp.got_to_login()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.logged_in_timestamp"><code class="docutils literal notranslate"><span class="pre">EposApp.logged_in_timestamp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.login"><code class="docutils literal notranslate"><span class="pre">EposApp.login()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.logout"><code class="docutils literal notranslate"><span class="pre">EposApp.logout()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.logout_callback"><code class="docutils literal notranslate"><span class="pre">EposApp.logout_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.notify"><code class="docutils literal notranslate"><span class="pre">EposApp.notify()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.notify_error"><code class="docutils literal notranslate"><span class="pre">EposApp.notify_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.on_start"><code class="docutils literal notranslate"><span class="pre">EposApp.on_start()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.on_stop"><code class="docutils literal notranslate"><span class="pre">EposApp.on_stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.open_drawer"><code class="docutils literal notranslate"><span class="pre">EposApp.open_drawer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.pop_dropdownmenu"><code class="docutils literal notranslate"><span class="pre">EposApp.pop_dropdownmenu()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.return_home"><code class="docutils literal notranslate"><span class="pre">EposApp.return_home()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.set_login_cookie"><code class="docutils literal notranslate"><span class="pre">EposApp.set_login_cookie()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.store"><code class="docutils literal notranslate"><span class="pre">EposApp.store</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.title"><code class="docutils literal notranslate"><span class="pre">EposApp.title</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.user"><code class="docutils literal notranslate"><span class="pre">EposApp.user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.username"><code class="docutils literal notranslate"><span class="pre">EposApp.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.EposApp.view_items_list"><code class="docutils literal notranslate"><span class="pre">EposApp.view_items_list()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.ErrorDialog"><code class="docutils literal notranslate"><span class="pre">ErrorDialog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ErrorDialog.message"><code class="docutils literal notranslate"><span class="pre">ErrorDialog.message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ErrorDialog.title"><code class="docutils literal notranslate"><span class="pre">ErrorDialog.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.IconListItem"><code class="docutils literal notranslate"><span class="pre">IconListItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.IconListItem.icon"><code class="docutils literal notranslate"><span class="pre">IconListItem.icon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.IconListItem.text"><code class="docutils literal notranslate"><span class="pre">IconListItem.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.Invetory"><code class="docutils literal notranslate"><span class="pre">Invetory</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Invetory.column_data"><code class="docutils literal notranslate"><span class="pre">Invetory.column_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Invetory.datatable"><code class="docutils literal notranslate"><span class="pre">Invetory.datatable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Invetory.row_data"><code class="docutils literal notranslate"><span class="pre">Invetory.row_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.LoginView"><code class="docutils literal notranslate"><span class="pre">LoginView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.LoginView.error_text"><code class="docutils literal notranslate"><span class="pre">LoginView.error_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.LoginView.password"><code class="docutils literal notranslate"><span class="pre">LoginView.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.LoginView.username"><code class="docutils literal notranslate"><span class="pre">LoginView.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.Notification"><code class="docutils literal notranslate"><span class="pre">Notification</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Notification.text"><code class="docutils literal notranslate"><span class="pre">Notification.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.RightLabel"><code class="docutils literal notranslate"><span class="pre">RightLabel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.RightLabel.adaptive_width"><code class="docutils literal notranslate"><span class="pre">RightLabel.adaptive_width</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.Sales"><code class="docutils literal notranslate"><span class="pre">Sales</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.add_to_shopping_list"><code class="docutils literal notranslate"><span class="pre">Sales.add_to_shopping_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.close_scanner"><code class="docutils literal notranslate"><span class="pre">Sales.close_scanner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.make_sale"><code class="docutils literal notranslate"><span class="pre">Sales.make_sale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.perform_match"><code class="docutils literal notranslate"><span class="pre">Sales.perform_match()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.scan"><code class="docutils literal notranslate"><span class="pre">Sales.scan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.search"><code class="docutils literal notranslate"><span class="pre">Sales.search()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Sales.shopping_list"><code class="docutils literal notranslate"><span class="pre">Sales.shopping_list</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner"><code class="docutils literal notranslate"><span class="pre">Scanner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.cache_management"><code class="docutils literal notranslate"><span class="pre">Scanner.cache_management()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.camera"><code class="docutils literal notranslate"><span class="pre">Scanner.camera</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.capture_image"><code class="docutils literal notranslate"><span class="pre">Scanner.capture_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.close_btn"><code class="docutils literal notranslate"><span class="pre">Scanner.close_btn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.close_scanner"><code class="docutils literal notranslate"><span class="pre">Scanner.close_scanner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.create_camera"><code class="docutils literal notranslate"><span class="pre">Scanner.create_camera()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.images"><code class="docutils literal notranslate"><span class="pre">Scanner.images</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.on_images"><code class="docutils literal notranslate"><span class="pre">Scanner.on_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.play"><code class="docutils literal notranslate"><span class="pre">Scanner.play</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.prepopulate"><code class="docutils literal notranslate"><span class="pre">Scanner.prepopulate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.scan"><code class="docutils literal notranslate"><span class="pre">Scanner.scan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.start_scanner"><code class="docutils literal notranslate"><span class="pre">Scanner.start_scanner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.start_scanning"><code class="docutils literal notranslate"><span class="pre">Scanner.start_scanning()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.Scanner.update"><code class="docutils literal notranslate"><span class="pre">Scanner.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser"><code class="docutils literal notranslate"><span class="pre">SignUpUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.check_username"><code class="docutils literal notranslate"><span class="pre">SignUpUser.check_username()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.compare_password"><code class="docutils literal notranslate"><span class="pre">SignUpUser.compare_password()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.email"><code class="docutils literal notranslate"><span class="pre">SignUpUser.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.password"><code class="docutils literal notranslate"><span class="pre">SignUpUser.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.password_strength"><code class="docutils literal notranslate"><span class="pre">SignUpUser.password_strength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.repeat_password"><code class="docutils literal notranslate"><span class="pre">SignUpUser.repeat_password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.signup"><code class="docutils literal notranslate"><span class="pre">SignUpUser.signup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.SignUpUser.username"><code class="docutils literal notranslate"><span class="pre">SignUpUser.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.TwoLineAvatar"><code class="docutils literal notranslate"><span class="pre">TwoLineAvatar</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.TwoLineAvatar.source"><code class="docutils literal notranslate"><span class="pre">TwoLineAvatar.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.TwoLineAvatar.timestamp"><code class="docutils literal notranslate"><span class="pre">TwoLineAvatar.timestamp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit"><code class="docutils literal notranslate"><span class="pre">UserEdit</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.edit"><code class="docutils literal notranslate"><span class="pre">UserEdit.edit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.email"><code class="docutils literal notranslate"><span class="pre">UserEdit.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.email_id"><code class="docutils literal notranslate"><span class="pre">UserEdit.email_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.password"><code class="docutils literal notranslate"><span class="pre">UserEdit.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.password_id"><code class="docutils literal notranslate"><span class="pre">UserEdit.password_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.user_id"><code class="docutils literal notranslate"><span class="pre">UserEdit.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.username"><code class="docutils literal notranslate"><span class="pre">UserEdit.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserEdit.username_id"><code class="docutils literal notranslate"><span class="pre">UserEdit.username_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.delete_dialog_dismiss"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.delete_dialog_dismiss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.delete_user_func"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.delete_user_func()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.edit_dialog_dismiss"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.edit_dialog_dismiss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.initialize_user"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.initialize_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.menu_callback"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.menu_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.open_delete_dialog"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.open_delete_dialog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.open_edit_dialog"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.open_edit_dialog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.UserMenuHandler.save_edit"><code class="docutils literal notranslate"><span class="pre">UserMenuHandler.save_edit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.ViewItems"><code class="docutils literal notranslate"><span class="pre">ViewItems</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ViewItems.add_item"><code class="docutils literal notranslate"><span class="pre">ViewItems.add_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ViewItems.close"><code class="docutils literal notranslate"><span class="pre">ViewItems.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ViewItems.dialog"><code class="docutils literal notranslate"><span class="pre">ViewItems.dialog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.app.ViewItems.get_items"><code class="docutils literal notranslate"><span class="pre">ViewItems.get_items()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.app.notify_banner"><code class="docutils literal notranslate"><span class="pre">notify_banner()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#epos-circularprogressbar-module">EPOS.circularprogressbar module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS.file">EPOS.file module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.file.CustomColors"><code class="docutils literal notranslate"><span class="pre">CustomColors</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.CustomColors.color"><code class="docutils literal notranslate"><span class="pre">CustomColors.color()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.CustomColors.generate_colors"><code class="docutils literal notranslate"><span class="pre">CustomColors.generate_colors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.CustomColors.normalize"><code class="docutils literal notranslate"><span class="pre">CustomColors.normalize()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.file.CustomFontApp"><code class="docutils literal notranslate"><span class="pre">CustomFontApp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.CustomFontApp.build"><code class="docutils literal notranslate"><span class="pre">CustomFontApp.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.file.TestColorTheme"><code class="docutils literal notranslate"><span class="pre">TestColorTheme</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.TestColorTheme.build"><code class="docutils literal notranslate"><span class="pre">TestColorTheme.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.file.ViewColorTemplate"><code class="docutils literal notranslate"><span class="pre">ViewColorTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.file.ViewColorTemplate.color"><code class="docutils literal notranslate"><span class="pre">ViewColorTemplate.color</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#epos-get-pip-module">EPOS.get-pip module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS.guitest">EPOS.guitest module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.CardContainer"><code class="docutils literal notranslate"><span class="pre">CardContainer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CardContainer.scale"><code class="docutils literal notranslate"><span class="pre">CardContainer.scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CardContainer.secondary_text"><code class="docutils literal notranslate"><span class="pre">CardContainer.secondary_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CardContainer.source"><code class="docutils literal notranslate"><span class="pre">CardContainer.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CardContainer.text"><code class="docutils literal notranslate"><span class="pre">CardContainer.text</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel"><code class="docutils literal notranslate"><span class="pre">CustomCarousel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel.add_widget"><code class="docutils literal notranslate"><span class="pre">CustomCarousel.add_widget()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel.auto"><code class="docutils literal notranslate"><span class="pre">CustomCarousel.auto</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel.circle_color"><code class="docutils literal notranslate"><span class="pre">CustomCarousel.circle_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel.circles_size"><code class="docutils literal notranslate"><span class="pre">CustomCarousel.circles_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarousel.on_size"><code class="docutils literal notranslate"><span class="pre">CustomCarousel.on_size()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.CustomCarouselItem"><code class="docutils literal notranslate"><span class="pre">CustomCarouselItem</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.ItemCircle"><code class="docutils literal notranslate"><span class="pre">ItemCircle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel"><code class="docutils literal notranslate"><span class="pre">MyCarousel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.add_circle"><code class="docutils literal notranslate"><span class="pre">MyCarousel.add_circle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.auto"><code class="docutils literal notranslate"><span class="pre">MyCarousel.auto</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.automate"><code class="docutils literal notranslate"><span class="pre">MyCarousel.automate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.on_auto"><code class="docutils literal notranslate"><span class="pre">MyCarousel.on_auto()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.on_touch_up"><code class="docutils literal notranslate"><span class="pre">MyCarousel.on_touch_up()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.reset"><code class="docutils literal notranslate"><span class="pre">MyCarousel.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.set_current_circle"><code class="docutils literal notranslate"><span class="pre">MyCarousel.set_current_circle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.MyCarousel.set_current_circle_auto"><code class="docutils literal notranslate"><span class="pre">MyCarousel.set_current_circle_auto()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.guitest.TestApp"><code class="docutils literal notranslate"><span class="pre">TestApp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.TestApp.build"><code class="docutils literal notranslate"><span class="pre">TestApp.build()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.guitest.TestApp.on_start"><code class="docutils literal notranslate"><span class="pre">TestApp.on_start()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#epos-main-module">EPOS.main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS.model">EPOS.model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.Items"><code class="docutils literal notranslate"><span class="pre">Items</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.description"><code class="docutils literal notranslate"><span class="pre">Items.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.id"><code class="docutils literal notranslate"><span class="pre">Items.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.name"><code class="docutils literal notranslate"><span class="pre">Items.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.price"><code class="docutils literal notranslate"><span class="pre">Items.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.quantity"><code class="docutils literal notranslate"><span class="pre">Items.quantity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.serialized"><code class="docutils literal notranslate"><span class="pre">Items.serialized</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Items.unit"><code class="docutils literal notranslate"><span class="pre">Items.unit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords"><code class="docutils literal notranslate"><span class="pre">LogRecords</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.action"><code class="docutils literal notranslate"><span class="pre">LogRecords.action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.date"><code class="docutils literal notranslate"><span class="pre">LogRecords.date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.id"><code class="docutils literal notranslate"><span class="pre">LogRecords.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.records"><code class="docutils literal notranslate"><span class="pre">LogRecords.records</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.time"><code class="docutils literal notranslate"><span class="pre">LogRecords.time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.LogRecords.user"><code class="docutils literal notranslate"><span class="pre">LogRecords.user</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.Sales"><code class="docutils literal notranslate"><span class="pre">Sales</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.id"><code class="docutils literal notranslate"><span class="pre">Sales.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.item"><code class="docutils literal notranslate"><span class="pre">Sales.item</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.price"><code class="docutils literal notranslate"><span class="pre">Sales.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.quantity"><code class="docutils literal notranslate"><span class="pre">Sales.quantity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.serialized"><code class="docutils literal notranslate"><span class="pre">Sales.serialized</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.transaction"><code class="docutils literal notranslate"><span class="pre">Sales.transaction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Sales.user"><code class="docutils literal notranslate"><span class="pre">Sales.user</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction"><code class="docutils literal notranslate"><span class="pre">Transaction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.amount"><code class="docutils literal notranslate"><span class="pre">Transaction.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.date"><code class="docutils literal notranslate"><span class="pre">Transaction.date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.id"><code class="docutils literal notranslate"><span class="pre">Transaction.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.serialize"><code class="docutils literal notranslate"><span class="pre">Transaction.serialize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.time"><code class="docutils literal notranslate"><span class="pre">Transaction.time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.Transaction.user_id"><code class="docutils literal notranslate"><span class="pre">Transaction.user_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.email"><code class="docutils literal notranslate"><span class="pre">User.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.id"><code class="docutils literal notranslate"><span class="pre">User.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.password"><code class="docutils literal notranslate"><span class="pre">User.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.serialized"><code class="docutils literal notranslate"><span class="pre">User.serialized</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.transaction"><code class="docutils literal notranslate"><span class="pre">User.transaction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.model.User.username"><code class="docutils literal notranslate"><span class="pre">User.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.model.current_time"><code class="docutils literal notranslate"><span class="pre">current_time()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#epos-test-password-strength-module">EPOS.test_password_strength module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS.tools">EPOS.tools module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB"><code class="docutils literal notranslate"><span class="pre">AddItemDB</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.add_item"><code class="docutils literal notranslate"><span class="pre">AddItemDB.add_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.description"><code class="docutils literal notranslate"><span class="pre">AddItemDB.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.name"><code class="docutils literal notranslate"><span class="pre">AddItemDB.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.price"><code class="docutils literal notranslate"><span class="pre">AddItemDB.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.quantity"><code class="docutils literal notranslate"><span class="pre">AddItemDB.quantity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.AddItemDB.unit"><code class="docutils literal notranslate"><span class="pre">AddItemDB.unit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.Amount"><code class="docutils literal notranslate"><span class="pre">Amount</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.Amount.amount"><code class="docutils literal notranslate"><span class="pre">Amount.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.Amount.period"><code class="docutils literal notranslate"><span class="pre">Amount.period()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.Amount.period_start_stop"><code class="docutils literal notranslate"><span class="pre">Amount.period_start_stop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.CodeScanner"><code class="docutils literal notranslate"><span class="pre">CodeScanner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.CodeScanner.barcodescan"><code class="docutils literal notranslate"><span class="pre">CodeScanner.barcodescan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.CodeScanner.qrcodescan"><code class="docutils literal notranslate"><span class="pre">CodeScanner.qrcodescan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.CodeScanner.scan"><code class="docutils literal notranslate"><span class="pre">CodeScanner.scan()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.EditUser"><code class="docutils literal notranslate"><span class="pre">EditUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.EditUser.save"><code class="docutils literal notranslate"><span class="pre">EditUser.save()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.EposError"><code class="docutils literal notranslate"><span class="pre">EposError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.Log"><code class="docutils literal notranslate"><span class="pre">Log</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.Log.get_logs"><code class="docutils literal notranslate"><span class="pre">Log.get_logs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.Log.log"><code class="docutils literal notranslate"><span class="pre">Log.log()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser"><code class="docutils literal notranslate"><span class="pre">LoginUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.check_user"><code class="docutils literal notranslate"><span class="pre">LoginUser.check_user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.login"><code class="docutils literal notranslate"><span class="pre">LoginUser.login()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.logout"><code class="docutils literal notranslate"><span class="pre">LoginUser.logout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.secret_key"><code class="docutils literal notranslate"><span class="pre">LoginUser.secret_key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.user_id"><code class="docutils literal notranslate"><span class="pre">LoginUser.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.LoginUser.validate"><code class="docutils literal notranslate"><span class="pre">LoginUser.validate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale"><code class="docutils literal notranslate"><span class="pre">MakeSale</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale.amount"><code class="docutils literal notranslate"><span class="pre">MakeSale.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale.cost"><code class="docutils literal notranslate"><span class="pre">MakeSale.cost()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale.insert_item"><code class="docutils literal notranslate"><span class="pre">MakeSale.insert_item()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale.make_sale"><code class="docutils literal notranslate"><span class="pre">MakeSale.make_sale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.MakeSale.parse_items"><code class="docutils literal notranslate"><span class="pre">MakeSale.parse_items()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength"><code class="docutils literal notranslate"><span class="pre">PasswordStrength</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.check_digits"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.check_digits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.check_length"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.check_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.check_lowercase"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.check_lowercase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.check_specialcase"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.check_specialcase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.check_uppercase"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.check_uppercase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.validate"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.validate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.PasswordStrength.validate_password_strength"><code class="docutils literal notranslate"><span class="pre">PasswordStrength.validate_password_strength()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.SalePie"><code class="docutils literal notranslate"><span class="pre">SalePie</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.SalePie.fetch"><code class="docutils literal notranslate"><span class="pre">SalePie.fetch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.SignUp"><code class="docutils literal notranslate"><span class="pre">SignUp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.SignUp.check_user"><code class="docutils literal notranslate"><span class="pre">SignUp.check_user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.SignUp.create_user"><code class="docutils literal notranslate"><span class="pre">SignUp.create_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.SignUp.validate_password"><code class="docutils literal notranslate"><span class="pre">SignUp.validate_password()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.TodaySale"><code class="docutils literal notranslate"><span class="pre">TodaySale</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.TodaySale.get_sales"><code class="docutils literal notranslate"><span class="pre">TodaySale.get_sales()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.TodaySale.get_todays_sales"><code class="docutils literal notranslate"><span class="pre">TodaySale.get_todays_sales()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="EPOS.html#EPOS.tools.TodaySale.query_transaction"><code class="docutils literal notranslate"><span class="pre">TodaySale.query_transaction()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.check_user_exist"><code class="docutils literal notranslate"><span class="pre">check_user_exist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.delete_item"><code class="docutils literal notranslate"><span class="pre">delete_item()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.delete_record"><code class="docutils literal notranslate"><span class="pre">delete_record()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.delete_sale"><code class="docutils literal notranslate"><span class="pre">delete_sale()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.delete_user"><code class="docutils literal notranslate"><span class="pre">delete_user()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.get_invetory"><code class="docutils literal notranslate"><span class="pre">get_invetory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.get_users"><code class="docutils literal notranslate"><span class="pre">get_users()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.item_ids"><code class="docutils literal notranslate"><span class="pre">item_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.query_user"><code class="docutils literal notranslate"><span class="pre">query_user()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPOS.html#EPOS.tools.users"><code class="docutils literal notranslate"><span class="pre">users()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EPOS.html#module-EPOS">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, BOA SYSTEM
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f6245a2f"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
