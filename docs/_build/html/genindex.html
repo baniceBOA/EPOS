@@ -1,0 +1,1343 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 --><title>Index - ELECTRONIC POINT OF SALE 0.0.1 documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">ELECTRONIC POINT OF SALE 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">ELECTRONIC POINT OF SALE 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a></div>
+</section>
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.model.LogRecords.action">action (EPOS.model.LogRecords attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.RightLabel.adaptive_width">adaptive_width (EPOS.app.RightLabel attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.add_circle">add_circle() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ViewItems.add_item">add_item() (EPOS.app.ViewItems method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.add_item">(EPOS.tools.AddItemDB method)</a>
+</li>
+          <li><a href="EPOS.uix.viewitems.html#EPOS.uix.viewitems.viewitems.ViewItems.add_item">(EPOS.uix.viewitems.viewitems.ViewItems method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Sales.add_to_shopping_list">add_to_shopping_list() (EPOS.app.Sales method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel.add_widget">add_widget() (EPOS.guitest.CustomCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddImage">AddImage (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem">AddItem (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem">(class in EPOS.uix.additem.additem)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.AddItemDB">AddItemDB (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard">AdminDashBoard (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.Amount">Amount (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Transaction.amount">amount (EPOS.model.Transaction attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.Amount.amount">(EPOS.tools.Amount property)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.tools.MakeSale.amount">(EPOS.tools.MakeSale attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel.auto">auto (EPOS.guitest.CustomCarousel attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.guitest.MyCarousel.auto">(EPOS.guitest.MyCarousel attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.automate">automate() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AvatarListItem">AvatarListItem (class in EPOS.app)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.CodeScanner.barcodescan">barcodescan() (EPOS.tools.CodeScanner method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.build">build() (EPOS.app.EposApp method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.file.CustomFontApp.build">(EPOS.file.CustomFontApp method)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.file.TestColorTheme.build">(EPOS.file.TestColorTheme method)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.guitest.TestApp.build">(EPOS.guitest.TestApp method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.Scanner.cache_management">cache_management() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.cache_management">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.camera">camera (EPOS.app.Scanner attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.camera">(EPOS.uix.scanner.scanner.Scanner attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.capture_image">capture_image() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.capture_image">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.CardContainer">CardContainer (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.guitest.CardContainer">(class in EPOS.guitest)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.CartItem.cart_button_icon">cart_button_icon (EPOS.app.CartItem attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.CartItem">CartItem (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.change_screen">change_screen() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.check_digits">check_digits() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.check_length">check_length() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.check_lowercase">check_lowercase() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.check_specialcase">check_specialcase() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.check_uppercase">check_uppercase() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.LoginUser.check_user">check_user (EPOS.tools.LoginUser property)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.SignUp.check_user">(EPOS.tools.SignUp property)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.check_user_exist">check_user_exist() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.check_username">check_username() (EPOS.app.SignUpUser method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.choose_image">choose_image() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.choose_image">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel.circle_color">circle_color (EPOS.guitest.CustomCarousel attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel.circles_size">circles_size (EPOS.guitest.CustomCarousel attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.clean_inputs">clean_inputs() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.clean_inputs">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound">ClickableTextFieldRound (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ViewItems.close">close() (EPOS.app.ViewItems method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#EPOS.uix.viewitems.viewitems.ViewItems.close">(EPOS.uix.viewitems.viewitems.ViewItems method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.close_btn">close_btn (EPOS.app.Scanner attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.close_btn">(EPOS.uix.scanner.scanner.Scanner attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Sales.close_scanner">close_scanner() (EPOS.app.Sales method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.Scanner.close_scanner">(EPOS.app.Scanner method)</a>
+</li>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.close_scanner">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.CodeScanner">CodeScanner (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.ViewColorTemplate.color">color (EPOS.file.ViewColorTemplate attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.CustomColors.color">color() (EPOS.file.CustomColors method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Invetory.column_data">column_data() (EPOS.app.Invetory method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.compare_password">compare_password() (EPOS.app.SignUpUser method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.MakeSale.cost">cost() (EPOS.tools.MakeSale method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.create_camera">create_camera() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.create_camera">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.SignUp.create_user">create_user() (EPOS.tools.SignUp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.current_time">current_time() (in module EPOS.model)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel">CustomCarousel (class in EPOS.guitest)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarouselItem">CustomCarouselItem (class in EPOS.guitest)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.CustomColors">CustomColors (class in EPOS.file)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.CustomFontApp">CustomFontApp (class in EPOS.file)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.CustomSnackbar">CustomSnackbar (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.customsnackbar.html#EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar">(class in EPOS.uix.customsnackbar.customsnackbar)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.EposApp.data_dir">data_dir (EPOS.app.EposApp attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Invetory.datatable">datatable (EPOS.app.Invetory attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.LogRecords.date">date (EPOS.model.LogRecords attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Transaction.date">(EPOS.model.Transaction attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.delete_dialog_dismiss">delete_dialog_dismiss() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.delete_item">delete_item() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.delete_record">delete_record() (in module EPOS.tools)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.delete_sale">delete_sale() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.delete_user">delete_user() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.delete_user_func">delete_user_func() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Items.description">description (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.description">(EPOS.tools.AddItemDB attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.ViewItems.dialog">dialog (EPOS.app.ViewItems attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#EPOS.uix.viewitems.viewitems.ViewItems.dialog">(EPOS.uix.viewitems.viewitems.ViewItems attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AddImage.dismiss_dialog">dismiss_dialog() (EPOS.app.AddImage method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.UserEdit.edit">edit() (EPOS.app.UserEdit method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.edit_dialog_dismiss">edit_dialog_dismiss() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.EditUser">EditUser (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.email">email (EPOS.app.SignUpUser attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.UserEdit.email">(EPOS.app.UserEdit attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.User.email">(EPOS.model.User attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserEdit.email_id">email_id (EPOS.app.UserEdit attribute)</a>
+</li>
+        <li>
+    EPOS
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.app
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS.app">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.file
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS.file">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.guitest
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS.guitest">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.model
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS.model">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.tools
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS.tools">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix
+
+        <ul>
+          <li><a href="EPOS.uix.html#module-EPOS.uix">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.additem
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#module-EPOS.uix.additem">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    EPOS.uix.additem.additem
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#module-EPOS.uix.additem.additem">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.customsnackbar
+
+        <ul>
+          <li><a href="EPOS.uix.customsnackbar.html#module-EPOS.uix.customsnackbar">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.customsnackbar.customsnackbar
+
+        <ul>
+          <li><a href="EPOS.uix.customsnackbar.html#module-EPOS.uix.customsnackbar.customsnackbar">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.iconlistitem
+
+        <ul>
+          <li><a href="EPOS.uix.iconlistitem.html#module-EPOS.uix.iconlistitem">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.iconlistitem.iconlistitem
+
+        <ul>
+          <li><a href="EPOS.uix.iconlistitem.html#module-EPOS.uix.iconlistitem.iconlistitem">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.scanner
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#module-EPOS.uix.scanner">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.scanner.scanner
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#module-EPOS.uix.scanner.scanner">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.viewitems
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#module-EPOS.uix.viewitems">module</a>
+</li>
+        </ul></li>
+        <li>
+    EPOS.uix.viewitems.viewitems
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#module-EPOS.uix.viewitems.viewitems">module</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.EposApp">EposApp (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.EposError">EposError</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.LoginView.error_text">error_text (EPOS.app.LoginView attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ErrorDialog">ErrorDialog (class in EPOS.app)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.SalePie.fetch">fetch() (EPOS.tools.SalePie method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.CustomSnackbar.font_size">font_size (EPOS.app.CustomSnackbar attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.customsnackbar.html#EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar.font_size">(EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.file.CustomColors.generate_colors">generate_colors() (EPOS.file.CustomColors method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.get_invetory">get_invetory() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ViewItems.get_items">get_items() (EPOS.app.ViewItems method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#EPOS.uix.viewitems.viewitems.ViewItems.get_items">(EPOS.uix.viewitems.viewitems.ViewItems method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.get_logged_activities">get_logged_activities() (EPOS.app.AdminDashBoard method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.Log.get_logs">get_logs() (EPOS.tools.Log static method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.TodaySale.get_sales">get_sales() (EPOS.tools.TodaySale method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.TodaySale.get_todays_sales">get_todays_sales() (EPOS.tools.TodaySale method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.get_users">get_users() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.got_to_login">got_to_login() (EPOS.app.EposApp method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.helper_text">helper_text (EPOS.app.ClickableTextFieldRound attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.helper_text_mode">helper_text_mode (EPOS.app.ClickableTextFieldRound attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.hint_text">hint_text (EPOS.app.ClickableTextFieldRound attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.icon">icon (EPOS.app.ClickableTextFieldRound attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.CustomSnackbar.icon">(EPOS.app.CustomSnackbar attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.IconListItem.icon">(EPOS.app.IconListItem attribute)</a>
+</li>
+          <li><a href="EPOS.uix.customsnackbar.html#EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar.icon">(EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar attribute)</a>
+</li>
+          <li><a href="EPOS.uix.iconlistitem.html#EPOS.uix.iconlistitem.iconlistitem.IconListItem.icon">(EPOS.uix.iconlistitem.iconlistitem.IconListItem attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AvatarListItem.icon_left">icon_left (EPOS.app.AvatarListItem attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AvatarListItem.icon_right">icon_right (EPOS.app.AvatarListItem attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.IconListItem">IconListItem (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.iconlistitem.html#EPOS.uix.iconlistitem.iconlistitem.IconListItem">(class in EPOS.uix.iconlistitem.iconlistitem)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.model.Items.id">id (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.LogRecords.id">(EPOS.model.LogRecords attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.Sales.id">(EPOS.model.Sales attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.Transaction.id">(EPOS.model.Transaction attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.User.id">(EPOS.model.User attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.Scanner.images">images (EPOS.app.Scanner attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.images">(EPOS.uix.scanner.scanner.Scanner attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.initialize_user">initialize_user() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.MakeSale.insert_item">insert_item() (EPOS.tools.MakeSale static method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Invetory">Invetory (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Sales.item">item (EPOS.model.Sales attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.item_ids">item_ids() (in module EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.ItemCircle">ItemCircle (class in EPOS.guitest)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Items">Items (class in EPOS.model)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.launch_admin">launch_admin() (EPOS.app.AdminDashBoard method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.Log">Log (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.Log.log">log() (EPOS.tools.Log method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.logged_in_timestamp">logged_in_timestamp (EPOS.app.EposApp attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.login">login() (EPOS.app.EposApp method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.LoginUser.login">(EPOS.tools.LoginUser method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.LoginUser">LoginUser (class in EPOS.tools)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.LoginView">LoginView (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.LoginUser.logout">logout (EPOS.tools.LoginUser property)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.logout">logout() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.logout_callback">logout_callback() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.LogRecords">LogRecords (class in EPOS.model)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.logs">logs (EPOS.app.AdminDashBoard attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.logs_refresh">logs_refresh() (EPOS.app.AdminDashBoard method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.Sales.make_sale">make_sale() (EPOS.app.Sales method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.MakeSale.make_sale">(EPOS.tools.MakeSale method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.MakeSale">MakeSale (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.menu_callback">menu_callback() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ErrorDialog.message">message (EPOS.app.ErrorDialog attribute)</a>
+</li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="EPOS.html#module-EPOS">EPOS</a>
+</li>
+          <li><a href="EPOS.html#module-EPOS.app">EPOS.app</a>
+</li>
+          <li><a href="EPOS.html#module-EPOS.file">EPOS.file</a>
+</li>
+          <li><a href="EPOS.html#module-EPOS.guitest">EPOS.guitest</a>
+</li>
+          <li><a href="EPOS.html#module-EPOS.model">EPOS.model</a>
+</li>
+          <li><a href="EPOS.html#module-EPOS.tools">EPOS.tools</a>
+</li>
+          <li><a href="EPOS.uix.html#module-EPOS.uix">EPOS.uix</a>
+</li>
+          <li><a href="EPOS.uix.additem.html#module-EPOS.uix.additem">EPOS.uix.additem</a>
+</li>
+          <li><a href="EPOS.uix.additem.html#module-EPOS.uix.additem.additem">EPOS.uix.additem.additem</a>
+</li>
+          <li><a href="EPOS.uix.customsnackbar.html#module-EPOS.uix.customsnackbar">EPOS.uix.customsnackbar</a>
+</li>
+          <li><a href="EPOS.uix.customsnackbar.html#module-EPOS.uix.customsnackbar.customsnackbar">EPOS.uix.customsnackbar.customsnackbar</a>
+</li>
+          <li><a href="EPOS.uix.iconlistitem.html#module-EPOS.uix.iconlistitem">EPOS.uix.iconlistitem</a>
+</li>
+          <li><a href="EPOS.uix.iconlistitem.html#module-EPOS.uix.iconlistitem.iconlistitem">EPOS.uix.iconlistitem.iconlistitem</a>
+</li>
+          <li><a href="EPOS.uix.scanner.html#module-EPOS.uix.scanner">EPOS.uix.scanner</a>
+</li>
+          <li><a href="EPOS.uix.scanner.html#module-EPOS.uix.scanner.scanner">EPOS.uix.scanner.scanner</a>
+</li>
+          <li><a href="EPOS.uix.viewitems.html#module-EPOS.uix.viewitems">EPOS.uix.viewitems</a>
+</li>
+          <li><a href="EPOS.uix.viewitems.html#module-EPOS.uix.viewitems.viewitems">EPOS.uix.viewitems.viewitems</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel">MyCarousel (class in EPOS.guitest)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.model.Items.name">name (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.name">(EPOS.tools.AddItemDB attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.next">next (EPOS.app.AdminDashBoard attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.CustomColors.normalize">normalize() (EPOS.file.CustomColors method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.Notification">Notification (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.notify">notify() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.notify_banner">notify_banner() (in module EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.notify_error">notify_error() (EPOS.app.EposApp method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.on_auto">on_auto() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.on_images">on_images() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.on_images">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.guitest.CustomCarousel.on_size">on_size() (EPOS.guitest.CustomCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddImage.on_source">on_source() (EPOS.app.AddImage method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.on_start">on_start() (EPOS.app.EposApp method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.guitest.TestApp.on_start">(EPOS.guitest.TestApp method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.EposApp.on_stop">on_stop() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.on_touch_up">on_touch_up() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.open_delete_dialog">open_delete_dialog() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.open_drawer">open_drawer() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.open_edit_dialog">open_edit_dialog() (EPOS.app.UserMenuHandler method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.MakeSale.parse_items">parse_items() (EPOS.tools.MakeSale method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.LoginView.password">password (EPOS.app.LoginView attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.SignUpUser.password">(EPOS.app.SignUpUser attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.UserEdit.password">(EPOS.app.UserEdit attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.User.password">(EPOS.model.User attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserEdit.password_id">password_id (EPOS.app.UserEdit attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.password_strength">password_strength() (EPOS.app.SignUpUser method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength">PasswordStrength (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Sales.perform_match">perform_match() (EPOS.app.Sales method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.Amount.period">period() (EPOS.tools.Amount method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.Amount.period_start_stop">period_start_stop() (EPOS.tools.Amount method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.play">play (EPOS.app.Scanner attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.play">(EPOS.uix.scanner.scanner.Scanner attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.pop_dropdownmenu">pop_dropdownmenu() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.prepopulate">prepopulate() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.prepopulate">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.previous">previous (EPOS.app.AdminDashBoard attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Items.price">price (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Sales.price">(EPOS.model.Sales attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.price">(EPOS.tools.AddItemDB attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="Q" class="genindex-section">
+  <h2>Q</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.CodeScanner.qrcodescan">qrcodescan() (EPOS.tools.CodeScanner method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Items.quantity">quantity (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Sales.quantity">(EPOS.model.Sales attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.quantity">(EPOS.tools.AddItemDB attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.TodaySale.query_transaction">query_transaction() (EPOS.tools.TodaySale method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.query_user">query_user() (in module EPOS.tools)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.model.LogRecords.records">records (EPOS.model.LogRecords property)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.repeat_password">repeat_password (EPOS.app.SignUpUser attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.reset">reset() (EPOS.guitest.MyCarousel method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.EposApp.return_home">return_home() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.RightLabel">RightLabel (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Invetory.row_data">row_data() (EPOS.app.Invetory method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.SalePie">SalePie (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Sales">Sales (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Sales">(class in EPOS.model)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.EditUser.save">save() (EPOS.tools.EditUser method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler.save_edit">save_edit() (EPOS.app.UserMenuHandler method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.save_item">save_item() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.save_item">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.CardContainer.scale">scale (EPOS.app.CardContainer attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.guitest.CardContainer.scale">(EPOS.guitest.CardContainer attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Sales.scan">scan() (EPOS.app.Sales method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.Scanner.scan">(EPOS.app.Scanner method)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.tools.CodeScanner.scan">(EPOS.tools.CodeScanner method)</a>
+</li>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.scan">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner">Scanner (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner">(class in EPOS.uix.scanner.scanner)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.screen_manager">screen_manager (EPOS.app.AdminDashBoard attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Sales.search">search() (EPOS.app.Sales method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.CardContainer.secondary_text">secondary_text (EPOS.app.CardContainer attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.guitest.CardContainer.secondary_text">(EPOS.guitest.CardContainer attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.LoginUser.secret_key">secret_key (EPOS.tools.LoginUser attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.selection">selection() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.selection">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.model.Transaction.serialize">serialize (EPOS.model.Transaction property)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Items.serialized">serialized (EPOS.model.Items property)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Sales.serialized">(EPOS.model.Sales property)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.User.serialized">(EPOS.model.User property)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.set_current_circle">set_current_circle() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.guitest.MyCarousel.set_current_circle_auto">set_current_circle_auto() (EPOS.guitest.MyCarousel method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddImage.set_image">set_image() (EPOS.app.AddImage method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.set_login_cookie">set_login_cookie() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.Sales.shopping_list">shopping_list (EPOS.app.Sales attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.SignUp">SignUp (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser.signup">signup() (EPOS.app.SignUpUser method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.SignUpUser">SignUpUser (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddImage.source">source (EPOS.app.AddImage attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.CardContainer.source">(EPOS.app.CardContainer attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.CartItem.source">(EPOS.app.CartItem attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.TwoLineAvatar.source">(EPOS.app.TwoLineAvatar attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.guitest.CardContainer.source">(EPOS.guitest.CardContainer attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.start_scanner">start_scanner() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.start_scanner">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.start_scanning">start_scanning() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.start_scanning">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.store">store (EPOS.app.EposApp attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.guitest.TestApp">TestApp (class in EPOS.guitest)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.TestColorTheme">TestColorTheme (class in EPOS.file)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AvatarListItem.text">text (EPOS.app.AvatarListItem attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.CardContainer.text">(EPOS.app.CardContainer attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.text">(EPOS.app.ClickableTextFieldRound attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.CustomSnackbar.text">(EPOS.app.CustomSnackbar attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.IconListItem.text">(EPOS.app.IconListItem attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.Notification.text">(EPOS.app.Notification attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.guitest.CardContainer.text">(EPOS.guitest.CardContainer attribute)</a>
+</li>
+          <li><a href="EPOS.uix.customsnackbar.html#EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar.text">(EPOS.uix.customsnackbar.customsnackbar.CustomSnackbar attribute)</a>
+</li>
+          <li><a href="EPOS.uix.iconlistitem.html#EPOS.uix.iconlistitem.iconlistitem.IconListItem.text">(EPOS.uix.iconlistitem.iconlistitem.IconListItem attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.text_field_icon">text_field_icon (EPOS.app.ClickableTextFieldRound attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.LogRecords.time">time (EPOS.model.LogRecords attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Transaction.time">(EPOS.model.Transaction attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.TwoLineAvatar.timestamp">timestamp (EPOS.app.TwoLineAvatar attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.title">title (EPOS.app.EposApp attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.ErrorDialog.title">(EPOS.app.ErrorDialog attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.tools.TodaySale">TodaySale (class in EPOS.tools)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.toggle_eye">toggle_eye() (EPOS.app.ClickableTextFieldRound method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Transaction">Transaction (class in EPOS.model)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.model.Sales.transaction">transaction (EPOS.model.Sales attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.User.transaction">(EPOS.model.User attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.TwoLineAvatar">TwoLineAvatar (class in EPOS.app)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.model.Items.unit">unit (EPOS.model.Items attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.AddItemDB.unit">(EPOS.tools.AddItemDB attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.Scanner.update">update() (EPOS.app.Scanner method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.scanner.html#EPOS.uix.scanner.scanner.Scanner.update">(EPOS.uix.scanner.scanner.Scanner method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.model.User">User (class in EPOS.model)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.user">user (EPOS.app.EposApp attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.LogRecords.user">(EPOS.model.LogRecords attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.Sales.user">(EPOS.model.Sales attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserEdit.user_id">user_id (EPOS.app.UserEdit attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.model.Transaction.user_id">(EPOS.model.Transaction attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.tools.LoginUser.user_id">(EPOS.tools.LoginUser property)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.app.UserEdit">UserEdit (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.UserMenuHandler">UserMenuHandler (class in EPOS.app)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.username">username (EPOS.app.EposApp attribute)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.app.LoginView.username">(EPOS.app.LoginView attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.SignUpUser.username">(EPOS.app.SignUpUser attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.app.UserEdit.username">(EPOS.app.UserEdit attribute)</a>
+</li>
+          <li><a href="EPOS.html#EPOS.model.User.username">(EPOS.model.User attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.UserEdit.username_id">username_id (EPOS.app.UserEdit attribute)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AdminDashBoard.users">users() (EPOS.app.AdminDashBoard method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.users">(in module EPOS.tools)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.LoginUser.validate">validate (EPOS.tools.LoginUser property)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ClickableTextFieldRound.validate">validate() (EPOS.app.ClickableTextFieldRound method)</a>
+
+        <ul>
+          <li><a href="EPOS.html#EPOS.tools.PasswordStrength.validate">(EPOS.tools.PasswordStrength method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.validate_integer">validate_integer() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.validate_integer">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.validate_otg">validate_otg() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.validate_otg">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="EPOS.html#EPOS.tools.SignUp.validate_password">validate_password() (EPOS.tools.SignUp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.tools.PasswordStrength.validate_password_strength">validate_password_strength() (EPOS.tools.PasswordStrength method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.AddItem.validate_strings">validate_strings() (EPOS.app.AddItem method)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.additem.html#EPOS.uix.additem.additem.AddItem.validate_strings">(EPOS.uix.additem.additem.AddItem method)</a>
+</li>
+        </ul></li>
+        <li><a href="EPOS.html#EPOS.app.EposApp.view_items_list">view_items_list() (EPOS.app.EposApp method)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.file.ViewColorTemplate">ViewColorTemplate (class in EPOS.file)</a>
+</li>
+        <li><a href="EPOS.html#EPOS.app.ViewItems">ViewItems (class in EPOS.app)</a>
+
+        <ul>
+          <li><a href="EPOS.uix.viewitems.html#EPOS.uix.viewitems.viewitems.ViewItems">(class in EPOS.uix.viewitems.viewitems)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, BOA SYSTEM
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f6245a2f"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
